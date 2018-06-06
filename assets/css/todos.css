@@ -1,7 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+h1 {
+    background: #2980b9;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.fa-edit {
+    float: right;
+}
+
 #container {
-    border: 2px solid gray;
     width: 360px;
-    margin: 0 auto;
+    margin: 100px auto;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    font-size: 18px;
+    /* by default width applies to content excl padding/border */
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    /* instructs browser to include padding/border while calculating width & height */
+    box-sizing: border-box;
+    color: #2980b9;
+    background: #f7f7f7;
+    /* removes the annoying gap when not in focus by filling it with invisible border */
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus {
+    /* removes default focus outline */
+    outline: none;
+    border: 3px solid #2980b9;
+    background: #fff;
+}
+
+ul {
+    /* remove bullet points */
+    list-style: none; 
+    /* remove margin/padding to ul (we add it to li later) */
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+
+li:nth-child(2n) {
+    background: #f7f7f7;
+}
+
+span {
+    background: #e74c3c;
+    color: white;
+    height: 40px;
+    /* width: 40px; */
+    width: 0;
+    display: inline-block;
+    text-align: center;
+    /* lines up todo item with input's left margin */
+    margin-right: 20px;
+    transition: 0.2s linear;
+}
+
+li:hover span {
+    width: 40px;
 }
 
 .completed {
